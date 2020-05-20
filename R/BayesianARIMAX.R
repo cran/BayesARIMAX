@@ -1,10 +1,9 @@
 
 BayesARIMAX<-function(Y,X,sd=10,iter=100,burnIn=40,nc=2,p=1,d=1,q=1)
 {
-  requireNamespace("TSA")
-  requireNamespace("coda")
+    requireNamespace("coda")
   requireNamespace("forecast")
-  model_arimax<-arimax(Y,order = c(p,d,q),xreg =X, include.mean = TRUE,  method = c( "ML"),kappa = 1e+06)
+  model_arimax<-arima(Y,order = c(p,d,q),xreg =X, include.mean = TRUE,  method = c( "ML"),kappa = 1e+06)
   par<-model_arimax$coef
   names(par) <- NULL
   para<-0

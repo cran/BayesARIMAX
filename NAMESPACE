@@ -1,6 +1,5 @@
 exportPattern("^[[:alpha:]]+")
 
-importFrom(stats,runif,rnorm,dnorm)
-import(TSA)
+importFrom(stats,arima,runif,rnorm,dnorm)
 import(coda)
 import(forecast)
